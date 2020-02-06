@@ -16,7 +16,14 @@
   <header class="page-header">
     <div class="page-header__search city-search">
       <form class="city-search__form" method="GET">
+        <h2 class="city-search__title">Посик погода по названию города</h2>
         <input class="city-search__input" type="text" placeholder="Введите название города">
+        <select class="city-search__select" name="cities-select" id="cities">
+          <option value="Moscow">Moscow</option>
+          <option value="London">London</option>
+          <option value="Washington">Washington</option>
+          <option value="Venice">Venice</option>
+        </select>
         <button class="city-search__submit-button" type="submit">Найти</button>
       </form>
     </div>
@@ -45,6 +52,10 @@
 
       </p>
       <p class="main-info__humidity">
+
+      </p>
+      <img class="main-info__img" src="" alt="weather-icon">
+      <p class="main-info__weather-type">
 
       </p>
     </div>

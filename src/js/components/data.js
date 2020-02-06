@@ -6,7 +6,7 @@ let node = document.querySelector(`#error`).content.querySelector(`.error`).clon
 let closeButton = node.querySelector(`.error__button`);
 
 export const onSuccess = (obj) => {
-
+  console.log(obj);
   cardFragment.appendChild(renderWeatherInfo(obj));
   weatherInfoList.appendChild(cardFragment);
 };
