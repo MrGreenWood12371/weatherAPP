@@ -11,8 +11,8 @@ export const renderWeatherInfo = (object) => {
   const weatherImage = cardElement.querySelector(`.main-info__img`);
   const weatherType = cardElement.querySelector(`.main-info__weather-type`);
 
-  mainTemperature.textContent = `Температура: ${object.main.temp} градусов`;
-  temperatureFeeling.textContent = `Ощущается как: ${object.main.feels_like} градусов`;
+  mainTemperature.textContent = `Температура: ${Math.round(object.main.temp)} градусов`;
+  temperatureFeeling.textContent = `Ощущается как: ${Math.round(object.main.feels_like)} градусов`;
   minTemperature.textContent = `Минимальная температура: ${object.main.temp_min} градусов`;
   maxTemperture.textContent = `Максимальная температура: ${object.main.temp_max} градусов`;
   pressureInfo.textContent = `Давление: ${object.main.pressure} мм. рт. ст.`;
