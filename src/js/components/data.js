@@ -4,9 +4,9 @@ const cardFragment = document.createDocumentFragment();
 const weatherInfoList = document.querySelector(`.weather-info`);
 let node = document.querySelector(`#error`).content.querySelector(`.error`).cloneNode(true);
 let closeButton = node.querySelector(`.error__button`);
+const ESC_KEYCODE = 27;
 
 export const onSuccess = (obj) => {
-  console.log(obj);
   cardFragment.appendChild(renderWeatherInfo(obj));
   weatherInfoList.appendChild(cardFragment);
 };
@@ -17,7 +17,7 @@ const onErrorButtonClick = () => {
 };
 
 const onErrorEscPress = (evt) => {
-  if (evt.keyCode === window.util.ESC_KEYCODE) {
+  if (evt.keyCode === ESC_KEYCODE) {
     closeButton.removeEventListener(`click`, onErrorButtonClick);
     document.removeEventListener(`keydown`, onErrorEscPress);
     window.removeEventListener(`click`, onErrorWindowClick);

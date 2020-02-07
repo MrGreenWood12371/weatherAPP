@@ -17,7 +17,7 @@ export const renderWeatherInfo = (object) => {
   maxTemperture.textContent = `Максимальная температура: ${object.main.temp_max} градусов`;
   pressureInfo.textContent = `Давление: ${object.main.pressure} мм. рт. ст.`;
   humidityInfo.textContent = `Влажность: ${object.main.humidity}%`;
-  weatherImage.src = `http://openweathermap.org/img/wn/${object.weather[0].icon}@2x.png`
+  weatherImage.src = `http://openweathermap.org/img/wn/${object.weather[0].icon}@2x.png`;
   weatherType.textContent = object.weather[0].main;
 
   return cardElement;
